@@ -80,10 +80,10 @@
     <section id="about">
       <h1 class="section-heading">About</h1>
       <div class="row about-details-container">
-        <div class="col-lg-6 col-sm-12 about-details-container-left">
+        <div class="col-md-6 col-sm-12 about-details-container-left">
           <img src="images/about.png" alt="" />
         </div>
-        <div class="col-lg-6 col-sm-12 about-details-container-right">
+        <div class="col-md-6 col-sm-12 about-details-container-right">
           <p>
             We at Factitious excel to deliver you with almost every service you
             desire. We create our vision and mission statements with utmost care
@@ -365,18 +365,20 @@
 
   <!-- Script for services section -->
   <script>
-    $(".service-bottom-content").hide();
-    $(".service").on("hover", function () {
-      $(".service-bottom-content").show();
-    });
+    if (window.matchMedia("(min-width: 899px)").matches) {
+      $(".service-bottom-content").hide();
+      $(".service").on("hover", function () {
+        $(".service-bottom-content").show();
+      });
 
-    $(".service").hover(
-      function () {
-        $(this).find(".service-bottom-content").show(500);
-      },
-      function () {
-        $(this).find(".service-bottom-content").hide(500);
-      }
-    );
+      $(".service").hover(
+        function () {
+          $(this).find(".service-bottom-content").show(500);
+        },
+        function () {
+          $(this).find(".service-bottom-content").hide(500);
+        }
+      );
+    }
   </script>
 </html>
